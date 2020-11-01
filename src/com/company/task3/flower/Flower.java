@@ -1,14 +1,51 @@
 package com.company.task3.flower;
 
-public abstract class Flower implements Comparable<Flower> {
+public class Flower implements Comparable<Flower> {
+  public enum FlowerType {
+    CHAMOMILE,
+    CHRYSANTHEMUM,
+    HYDRANGEA,
+    ROSE
+  }
+  private FlowerType name;
+  private double price;
+  private int stemlenght;
+  private boolean isFresh;
 
-  public abstract double getPrice();
+  public void setName(FlowerType name) {
+    this.name = name;
+  }
 
-  public abstract String getName();
+  public void setPrice(double price) {
+    this.price = price;
+  }
 
-  public abstract int getStemLenght();
+  public void setStemlenght(int stemlenght) {
+    this.stemlenght = stemlenght;
+  }
 
-  public abstract boolean isFresh();
+  public void setFresh(boolean fresh) {
+    isFresh = fresh;
+  }
+
+  public double getPrice() {
+    return price;
+  }
+
+
+  public String getName() {
+    return name.toString();
+  }
+
+
+  public int getStemLenght() {
+    return stemlenght;
+  }
+
+
+  public boolean isFresh() {
+    return isFresh;
+  }
 
   public int compareTo(Flower flower) {
 
