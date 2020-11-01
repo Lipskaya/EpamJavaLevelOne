@@ -1,5 +1,5 @@
 /target/
-
+/out/
 # Eclipse STS artifacts
 **/.settings/**
 **/.classpath
@@ -8,6 +8,7 @@
 # IntelliJ project files
 .idea
 *.iml
+*.class
 
 # Mac OS files
 .DS_Store

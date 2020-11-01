@@ -3,18 +3,32 @@ package com.company.task1;
 public class SumAndMultiply {
 
   public static void main(String[] args) {
-    //String[] aargs = {"5","3","1"};
+    //String[] args = {"5","3","1"};
     //Ввести целые числа как аргументы командной строки,
     // подсчитать их сумму (произведение) и вывести результат на консоль.
-    int sum = 0;
-    double multiply = 1;
-    for (int i = 0; i < args.length ; i++) {
-      sum = sum + Integer.parseInt(args[i]);
+    if (args.length > 1){
+      try {
+        int sum = 0;
+        double multiplication = 1;
+        for (int i = 0; i < args.length ; i++) {
+
+          sum += Integer.parseInt(args[i]);
+        }
+        for (int i = 0; i < args.length; i++) {
+          multiplication *= Integer.parseInt(args[i]);
+        }
+        System.out.println("Сумма = " + sum);
+        System.out.println("Произведение = " + multiplication);
+      }
+      catch (NumberFormatException e){
+        System.out.println("Параметры запуска заданны не верно. " +
+                "Допустимы только целочисленные аргументы");
+      }
     }
-    for (int i = 0; i < args.length; i++) {
-      multiply = multiply * Integer.parseInt(args[i]);
+    else {
+      System.out.println("Неверное количество параметров, задайте хотя бы " +
+              "два целочисленных значения");
     }
-    System.out.println(sum);
-    System.out.println(multiply);
+
   }
 }
