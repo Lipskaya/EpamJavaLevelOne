@@ -16,11 +16,10 @@ public class PrintRandomNumbers {
         String number = args[0];
         int intNumber = Integer.parseInt(number);
 
-        int randomNumbers[] = new int[intNumber];
+        int[] randomNumbers = new int[intNumber];
 
         for (int i = 0; i < intNumber; i++) {
-          int randomInt = new Random().nextInt(10);
-          randomNumbers[i] = randomInt;
+          randomNumbers[i] = new Random().nextInt(10);
 
         }
         //Вывести заданное количество случайных чисел с переходом и без перехода на новую строку
